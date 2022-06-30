@@ -1,0 +1,45 @@
+{
+  "name": "mysql2-transactional-tests",
+  "version": "1.0.0",
+  "description": "Wraps each test in transaction for `mysql2` package",
+  "repository": "https://github.com/romeerez/mysql2-transactional-tests",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --setupFiles dotenv/config",
+    "build": "tsc",
+    "prepublish": "tsc",
+    "prepare-db": "ts-node tests/migrations/createSample.ts"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
+  },
+  "keywords": [
+    "mysql",
+    "mysql2",
+    "transactional tests",
+    "test"
+  ],
+  "author": "Roman Kushyn",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.3",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.1.0",
+    "jest": "^28.1.1",
+    "mysql2": "^2.3.3",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "mysql2": "*"
+  }
+}
