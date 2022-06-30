@@ -90,10 +90,10 @@ export const useTestDatabase = () => {
     patchMysql2ForTransactions()
   })
   beforeEach(async () => {
-    await startTransaction()
+    await startTransaction(db)
   })
   afterEach(async () => {
-    await rollbackTransaction()
+    await rollbackTransaction(db)
   })
   afterAll(() => {
     unpatchMysql2ForTransactions()

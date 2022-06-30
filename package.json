@@ -1,6 +1,6 @@
 {
   "name": "mysql2-transactional-tests",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wraps each test in transaction for `mysql2` package",
   "repository": "https://github.com/romeerez/mysql2-transactional-tests",
   "main": "dist/index.js",
